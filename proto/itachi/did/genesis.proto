@@ -9,5 +9,5 @@ option go_package = "itachi/x/did/types";
 
 // GenesisState defines the did module's genesis state.
 message GenesisState {
-  map<string, DIDDocumentWithSeq> documents = 1;
+  Params params = 1 [(gogoproto.nullable) = false];
 }

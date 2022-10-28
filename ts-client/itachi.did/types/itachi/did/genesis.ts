@@ -6,7 +6,6 @@ export const protobufPackage = "itachi.did";
 
 /** GenesisState defines the did module's genesis state. */
 export interface GenesisState {
-  /** this line is used by starport scaffolding # genesis/proto/state */
   params: Params | undefined;
 }
 

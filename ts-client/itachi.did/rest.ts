@@ -154,7 +154,7 @@ export class HttpClient<SecurityDataType = unknown> {
 }
 
 /**
- * @title itachi/did/genesis.proto
+ * @title itachi/did/did.proto
  * @version version not set
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {

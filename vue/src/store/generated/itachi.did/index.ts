@@ -1,9 +1,16 @@
 import { Client, registry, MissingWalletError } from 'itachi-client-ts'
 
+import { Strings } from "itachi-client-ts/itachi.did/types"
+import { DIDDocument } from "itachi-client-ts/itachi.did/types"
+import { VerificationMethod } from "itachi-client-ts/itachi.did/types"
+import { VerificationRelationship } from "itachi-client-ts/itachi.did/types"
+import { Service } from "itachi-client-ts/itachi.did/types"
+import { DIDDocumentWithSeq } from "itachi-client-ts/itachi.did/types"
+import { DataWithSeq } from "itachi-client-ts/itachi.did/types"
 import { Params } from "itachi-client-ts/itachi.did/types"
 
 
-export { Params };
+export { Strings, DIDDocument, VerificationMethod, VerificationRelationship, Service, DIDDocumentWithSeq, DataWithSeq, Params };
 
 function initClient(vuexGetters) {
 	return new Client(vuexGetters['common/env/getEnv'], vuexGetters['common/wallet/signer'])
@@ -37,6 +44,13 @@ const getDefaultState = () => {
 				Params: {},
 				
 				_Structure: {
+						Strings: getStructure(Strings.fromPartial({})),
+						DIDDocument: getStructure(DIDDocument.fromPartial({})),
+						VerificationMethod: getStructure(VerificationMethod.fromPartial({})),
+						VerificationRelationship: getStructure(VerificationRelationship.fromPartial({})),
+						Service: getStructure(Service.fromPartial({})),
+						DIDDocumentWithSeq: getStructure(DIDDocumentWithSeq.fromPartial({})),
+						DataWithSeq: getStructure(DataWithSeq.fromPartial({})),
 						Params: getStructure(Params.fromPartial({})),
 						
 		},
